@@ -38,8 +38,15 @@ class nxcSocialNetworksPublishHandlerTwitter extends nxcSocialNetworksPublishHan
 			array( 'status' => $message )
 		);
 
-		if( isset( $response->error ) ) {
-			throw new Exception( $response->error );
+		if( isset( $response->errors ) ) {
+            $message = array();
+
+            foreach( $response->errors as $error )
+            {
+                $message[] = $error->message . ' => Code : ' . $error->code;
+            }
+
+			throw new Exception( implode( ', ', $message ) );
 		}
 	}
 
