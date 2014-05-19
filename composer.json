@@ -1,0 +1,23 @@
+{
+    "name": "nxc/nxc_social_networks",
+    "version": "1.0.0",
+    "type": "ezpublish-legacy-extension",
+    "authors": [
+        {
+            "name": "Serhey Dolgushev",
+            "email": "serhey.dolgushev@nxc.no"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:heliopsis/nxc_social_networks.git"
+        }
+    ],
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0.x-dev"
+        },
+        "ezpublish-legacy-extension-name": "nxc_social_networks"
+    }
+}
